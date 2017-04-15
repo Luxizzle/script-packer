@@ -1,4 +1,1 @@
-print('Hello world!')
-
-print('Hello, I\'m from test-part.lua!')
-local someValue = 3
+print('Hello world!')print('Hello, I\'m from test-part.lua!')local a=3
