@@ -15,11 +15,11 @@ if (!program.input) {
   process.exit(1);
 }
 
-program.ouput = program.output || 'packed_' + program.input
+program.output = program.output || 'packed_' + program.input
 
 var packedContent = pack(program.input)
 
-fs.writeFile(program.ouput, packedContent, function(err) {
+fs.writeFile(program.output, packedContent, function(err) {
   if (err) throw err;
 
   console.log('Packed file to ' + program.output)
