@@ -1,5 +1,5 @@
-var luamin = require('luamin'),
-    fs = require('fs'),
+
+var fs = require('fs'),
     path = require('path');
 
 var packRegex = /--\s*spack="([^"]+)"/g
