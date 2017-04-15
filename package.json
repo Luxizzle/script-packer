@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "commander": "^2.9.0",
-    "luamin": "^1.0.4"
+    "luamin": "^1.0.4",
+    "moment": "^2.18.1"
   }
 }
