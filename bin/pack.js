@@ -11,7 +11,7 @@ var pack = require('../index.js')
 program
   .option('-i, --input <file>', 'File to pack')
   .option('-o, --output <name>', 'Output file name')
-  .option('-w, --watch <interval>', "Watch for file changes")
+  .option('-w, --watch [interval]', "Watch for file changes")
   .option('-m, --minify', "Minify packed output")
   .parse(process.argv)
 
