@@ -11,7 +11,7 @@ var pack = require('../index.js')
 program
   .option('-i, --input <file>', 'File to pack')
   .option('-o, --output <name>', 'Output file name')
-  .option('-w, --watch', "Watch for file changes")
+  .option('-w, --watch <interval>', "Watch for file changes")
   .option('-m, --minify', "Minify packed output")
   .parse(process.argv)
 
@@ -36,7 +36,9 @@ if (!program.watch) {
     console.log('Packed file to ' + program.output)
   })
 } else {
-  fs.watchFile(program.input, function() {
+  program.watch = typeof program.watch === "number" ? program.watch : 2000
+
+  fs.watchFile(program.input, { interval: program.watch }, function() {
     program.output = program.output || ( path.basename(program.input, '.lua') + '_packed.lua' )
 
     var packedContent = pack(program.input)
