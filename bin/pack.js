@@ -2,6 +2,7 @@
 
 var program = require('commander');
 var fs = require('fs');
+var path = require('path');
 
 var pack = require('../index.js')
 
@@ -15,7 +16,7 @@ if (!program.input) {
   process.exit(1);
 }
 
-program.output = program.output || 'packed_' + program.input
+program.output = program.output || ( path.basename(program.input, '.lua') + '_packed.lua' )
 
 var packedContent = pack(program.input)
 
