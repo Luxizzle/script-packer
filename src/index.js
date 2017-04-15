@@ -24,7 +24,7 @@ function packFile(file) {
 function replacePack(match, file ) {
   var path = getPath(file)
   var fileContent = fs.readFileSync(path, 'utf8')
-  return fileContent
+  return fileContent.replace(packRegex, replacePack)
 }
 
 module.exports = packFile
