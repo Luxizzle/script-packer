@@ -6,8 +6,8 @@ var fs = require('fs');
 var pack = require('../index.js')
 
 program
-  .option('-i, --input', 'File to pack')
-  .option('-o, --output', 'Output file name')
+  .option('-i, --input <file>', 'File to pack')
+  .option('-o, --output <name>', 'Output file name')
   .parse(process.argv)
 
 if (!program.input) {
