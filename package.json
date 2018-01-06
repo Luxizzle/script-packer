@@ -1,5 +1,5 @@
 {
-  "name": "script-packer",
+  "name": "script-packer-v2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,13 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "spack": "bin/pack.js"
+    "spack": "index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.9.0",
+    "commander": "^2.12.2",
     "luamin": "^1.0.4",
-    "moment": "^2.18.1"
+    "moment": "^2.20.1"
   }
 }
