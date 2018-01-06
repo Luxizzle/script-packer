@@ -10,6 +10,7 @@ program
 	.arguments('<input> <output>')
 	.option('-w, --watch', "Watch for file changes")
 	.option('-m, --minify', "Minify packed output")
+	.option('-n, --name [name]', "Add made by")
 	.parse(process.argv)
 
 //console.log(program.args, process.cwd())
@@ -66,7 +67,7 @@ function pack() {
 
 --//
 
--- made by Suzuya_Lychnus (483095296)
+-- made by ${program.name || 'unknown'}
 
 -- updated on ${moment().format('L LTS')}
 
