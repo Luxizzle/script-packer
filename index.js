@@ -81,7 +81,7 @@ function pack() {
 	fs.writeFile(outputFile, packedContent, function (err) {
 		if (err) throw err;
 
-		console.log('Packed file to ' + outputFile)
+		console.log('Packed file to ' + outputFile + "\n")
 	})
 }
 
